@@ -1,6 +1,4 @@
-# MACHINE-LEARNING
 
-Ứng dụng PyQt6 quản lý đơn hàng thương mại điện tử (Olist) tích hợp các mô hình học máy. Chi tiết xem [OlistApp/README.md](OlistApp/README.md).
 
 ## Tổng quan
 
