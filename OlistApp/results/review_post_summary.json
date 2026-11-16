@@ -1,0 +1,10 @@
+{
+ "integrated": "Random Forest",
+ "best_validation_ap": "Random Forest",
+ "threshold": 0.3215390938143064,
+ "n_features": 161,
+ "n_train": 38963,
+ "n_validation": 23729,
+ "n_test": 26958,
+ "source": "5.3 (olist_5_3_review_prediction.py)"
+}
