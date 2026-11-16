@@ -1,5 +1,24 @@
 # Ứng dụng PyQt6 – Smart E-commerce Order Management
 
+## Chạy nhanh
+
+```powershell
+git clone https://github.com/hantrinh1103-wq/MACHINE-LEARNING
+cd MACHINE-LEARNING/OlistApp
+python -m pip install -r requirements.txt
+python test/run_app.py
+```
+
+**Tài khoản đăng nhập (demo):**
+
+| Tên đăng nhập | Mật khẩu |
+| --- | --- |
+| `admin` | `admin123` |
+
+Thư mục đã có sẵn dữ liệu gốc (`data/raw`), dữ liệu đã tiền xử lý và các model đã huấn luyện, nên clone về là chạy được, không cần tải thêm. Đã chạy thử với Python 3.13 trên Windows.
+
+## Mô hình tích hợp
+
 Ứng dụng tích hợp ba mô hình được chọn ở mục 5.5.2 của báo cáo:
 
 | Chức năng | Mô hình tích hợp | Nguồn |
@@ -26,9 +45,7 @@ OlistApp/
 
 Dữ liệu gốc được đọc từ `data/raw/*.csv` (6 tệp: customers, orders, order_items, order_reviews, products, sellers), nên có thể chép riêng thư mục `OlistApp` đi chạy.
 
-## Cài và chạy
-
-### Luồng sử dụng nghiệp vụ
+## Luồng sử dụng nghiệp vụ
 
 - **Việc cần theo dõi**: danh sách cảnh báo trên tập kiểm thử lịch sử, nhấp đúp để tra cứu đơn. Số đếm không phải đơn đang xử lý trực tiếp.
 - **Theo dõi giao hàng / Chăm sóc sau giao**: xem điểm cảnh báo, thông tin đối chiếu và gợi ý xử lý. Chỉ số và biểu đồ kỹ thuật nằm trong tab **Đánh giá mô hình**.
@@ -40,14 +57,11 @@ Lịch sử nhà bán tổng hợp toàn kỳ, không dùng làm đặc trưng m
 
 Kiểm tra: `python -m unittest test.test_seller_selection -v`; kiểm tra các luồng Qt trên Windows: `python test/smoke_business_ui.py`.
 
-```powershell
-python -m pip install -r requirements.txt
+## Chạy lại mô hình (tùy chọn)
 
-# (tùy chọn) chạy lại mô hình
+```powershell
 python ml/seller_clustering.py        # K-Means theo 5.4, thêm --k 4 để ép số cụm
 python ml/import_review_v2.py <thư mục kết quả 5.3>   # nhập Random Forest nhánh sau giao (161 cột) từ olist_5_3_review_prediction.py
-
-python test/run_app.py
 ```
 
 ## Ghi chú
