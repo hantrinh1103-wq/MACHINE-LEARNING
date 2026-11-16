@@ -8,16 +8,6 @@
 | Cảnh báo đánh giá 1–2 sao (sau khi giao, trước phản hồi đầu tiên) | Random Forest, nhánh sau giao hàng | `ml/import_review_v2.py` (từ kết quả 5.3) → `models/review_post_model.joblib` |
 | Phân nhóm nhà bán hàng | K-Means, K = 2 (Silhouette cao nhất) | `ml/seller_clustering.py`, làm lại đúng `CODE/5.4.ipynb` → `models/seller_kmeans.joblib` |
 
-## Giao diện (chương 6)
-
-`python test/run_app.py` mở màn hình đăng nhập (`ui/LoginWindow.py`, tài khoản demo `admin` / `admin123`), sau đó vào cửa sổ chính (`ui/AppWindow.py`) có sidebar và 4 màn hình:
-
-| Màn hình (6.1) | Phần kết quả mô hình trên màn hình (6.2) |
-| --- | --- |
-| 6.1.1 Tổng quan hệ thống | 6.2.1 bảng ba mô hình đã tích hợp, tra cứu nhanh một đơn qua cả ba mô hình |
-| 6.1.2 Dự đoán giao hàng trễ | 6.2.2 điểm rủi ro của đơn, chỉ số test, ma trận nhầm lẫn, đường PR, so sánh 4 mô hình |
-| 6.1.3 Dự đoán đánh giá tiêu cực | 6.2.3 tương tự cho mô hình Random Forest nhánh sau giao |
-| 6.1.4 Phân nhóm nhà bán hàng | 6.2.4 hồ sơ tâm cụm, chọn K, Silhouette và ARI, PCA/boxplot, danh sách nhà bán, nhóm của nhà bán trong đơn |
 
 Màu và widget dùng chung nằm ở `ui/theme.py`. Ảnh chụp từng màn hình: `python test/shot_new_ui.py` → `results/screenshots/v2/` (tự tạo khi chạy).
 
